@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5876814596126568575}
   - component: {fileID: 5241463192934333340}
   - component: {fileID: 4797881365167970315}
+  - component: {fileID: 6736096907136703477}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -46,7 +47,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputManager: {fileID: 4797881365167970315}
+  dialogueManager: {fileID: 6736096907136703477}
   controlState: 0
+  testLines:
+  - command: 
+    dialogueText: This should be the first line of text. This is the text. ewjnrowefrowefnoiwenfoiwefoiwenfoi
+    commandObject: {fileID: 0}
+  - command: 
+    dialogueText: This should be the second line of text.
+    commandObject: {fileID: 0}
+  - command: 
+    dialogueText: You can skip the text animation by just clicking again. ewoifjweoifjweoifjiowefoiwehfwoifjwoiefjwiofhweoifwjoi
+      woah thats a lot of stuff you skipped
+    commandObject: {fileID: 0}
+  - command: 
+    dialogueText: The next text will be a command that ends the dialogue mode.
+    commandObject: {fileID: 0}
+  - command: END
+    dialogueText: 
+    commandObject: {fileID: 0}
 --- !u!114 &4797881365167970315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,3 +81,22 @@ MonoBehaviour:
   ref_select: {fileID: 510919172655279788, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   ref_return: {fileID: -8595260292474853744, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   gm: {fileID: 0}
+--- !u!114 &6736096907136703477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5850923541879517283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fb37082809b80342832723eaab55ba5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textSpeed: 0.03
+  dialogueCanvas: {fileID: 0}
+  dialogueTriangle: {fileID: 0}
+  textObject: {fileID: 0}
+  dialogueIndex: 0
+  currentDialogue: []
+  dialogueAnimSkipped: 0

@@ -27,6 +27,7 @@ public class SpookyInputManager : MonoBehaviour
         {
             // progress dialogue
             Debug.Log("SELECT (state = dialogue)");
+            gm.dialogueManager.RunDialogue();
         }
         else if (gm.controlState == ControlState.Overworld)
         {
