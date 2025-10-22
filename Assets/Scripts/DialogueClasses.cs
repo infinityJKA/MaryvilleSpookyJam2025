@@ -16,8 +16,9 @@ public class DialogueLine
 
 }
 
+[Serializable]
 public class MultichoiceObject
 {
-    String buttonText;
-    String flagName;
+    public String buttonText;
+    public String flagName;
 }

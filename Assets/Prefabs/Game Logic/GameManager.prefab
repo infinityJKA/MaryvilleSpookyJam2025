@@ -50,22 +50,64 @@ MonoBehaviour:
   dialogueManager: {fileID: 6736096907136703477}
   controlState: 0
   testLines:
-  - command: 
-    dialogueText: This should be the first line of text. This is the text. ewjnrowefrowefnoiwenfoiwefoiwenfoi
+  - command: FLAG
+    dialogueText: start
     commandObject: {fileID: 0}
+    multichoice: []
   - command: 
-    dialogueText: This should be the second line of text.
+    dialogueText: The next dialogue will be a multichoice
     commandObject: {fileID: 0}
-  - command: 
-    dialogueText: You can skip the text animation by just clicking again. ewoifjweoifjweoifjiowefoiwehfwoifjwoiefjwiofhweoifwjoi
-      woah thats a lot of stuff you skipped
-    commandObject: {fileID: 0}
-  - command: 
-    dialogueText: The next text will be a command that ends the dialogue mode.
-    commandObject: {fileID: 0}
-  - command: END
+    multichoice: []
+  - command: MULTI
     dialogueText: 
     commandObject: {fileID: 0}
+    multichoice:
+    - buttonText: Option1
+      flagName: 1
+    - buttonText: Option2
+      flagName: 2
+    - buttonText: Option3
+      flagName: 3
+  - command: 
+    dialogueText: You're not supposed to see this text!
+    commandObject: {fileID: 0}
+    multichoice: []
+  - command: FLAG
+    dialogueText: 1
+    commandObject: {fileID: 0}
+    multichoice: []
+  - command: 
+    dialogueText: You chose the first option!
+    commandObject: {fileID: 0}
+    multichoice: []
+  - command: SENDTO
+    dialogueText: start
+    commandObject: {fileID: 0}
+    multichoice: []
+  - command: FLAG
+    dialogueText: 2
+    commandObject: {fileID: 0}
+    multichoice: []
+  - command: 
+    dialogueText: You chose the second option!
+    commandObject: {fileID: 0}
+    multichoice: []
+  - command: SENDTO
+    dialogueText: start
+    commandObject: {fileID: 0}
+    multichoice: []
+  - command: FLAG
+    dialogueText: 3
+    commandObject: {fileID: 0}
+    multichoice: []
+  - command: 
+    dialogueText: You chose the third option!
+    commandObject: {fileID: 0}
+    multichoice: []
+  - command: SENDTO
+    dialogueText: start
+    commandObject: {fileID: 0}
+    multichoice: []
 --- !u!114 &4797881365167970315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,6 +139,9 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 0}
   dialogueTriangle: {fileID: 0}
   textObject: {fileID: 0}
+  multichoiceParent: {fileID: 0}
+  multichoiceButtonPrefab: {fileID: 623498265812619792, guid: 7ad1cdad226d017448f6b7427afa81d5, type: 3}
   dialogueIndex: 0
   currentDialogue: []
   dialogueAnimSkipped: 0
+  usedCommand: 0
