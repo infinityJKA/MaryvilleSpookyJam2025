@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
     public ControlState controlState;
+    public InteractableObject interactableObject;
     
     
 

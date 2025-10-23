@@ -11,7 +11,7 @@ public class DialogueManager : MonoBehaviour
 
     [Header("UI Objects")]
     public GameObject dialogueCanvas;
-    public GameObject dialogueTriangle;
+    public GameObject dialogueTriangle, dialogueBox;
     public TMP_Text textObject;
     public GameObject multichoiceParent;
     public MultichoiceButton multichoiceButtonPrefab;
@@ -35,6 +35,7 @@ public class DialogueManager : MonoBehaviour
         gm.controlState = ControlState.NoControls;
 
         multichoiceParent.SetActive(false);
+        dialogueCanvas.SetActive(true);
 
         RunDialogue();
     }
@@ -47,6 +48,8 @@ public class DialogueManager : MonoBehaviour
         gm.controlState = ControlState.NoControls;
 
         multichoiceParent.SetActive(false);
+        dialogueCanvas.SetActive(true);
+        dialogueBox.SetActive(false);
 
         usedCommand = false;
         dialogueAnimSkipped = false;
@@ -73,6 +76,7 @@ public class DialogueManager : MonoBehaviour
             else // if line is something to print normally
             {
                 textObject.text = "";
+                dialogueBox.SetActive(true);
                 dialogueTriangle.SetActive(false);
                 gm.controlState = ControlState.Dialogue;
                 StartCoroutine(TypeLine(line.dialogueText));

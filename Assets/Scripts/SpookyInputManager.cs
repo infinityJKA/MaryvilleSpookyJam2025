@@ -27,14 +27,11 @@ public class SpookyInputManager : MonoBehaviour
     {
         if (gm.controlState == ControlState.Dialogue)
         {
-            // progress dialogue
-            Debug.Log("SELECT (state = dialogue)");
             gm.dialogueManager.RunDialogue();
         }
         else if (gm.controlState == ControlState.Overworld)
         {
-            // interact
-            Debug.Log("SELECT (state = overworld)");
+            if (gm.interactableObject != null) gm.dialogueManager.StartDialogue(gm.interactableObject.dialogue);   
         }
     }
 
