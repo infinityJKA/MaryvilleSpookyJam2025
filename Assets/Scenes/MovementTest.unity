@@ -330,11 +330,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434799319}
   m_CullTransparentMesh: 1
---- !u!136 &707754838 stripped
-CapsuleCollider:
-  m_CorrespondingSourceObject: {fileID: 1895891724941704198, guid: af714108ab1ca6248a90753e4c948ba7, type: 3}
-  m_PrefabInstance: {fileID: 1358396703317559855}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &762804530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -343,6 +338,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1446578481571838109, guid: b98d6e3caefd6684cade68e9c60da334, type: 3}
+      propertyPath: moveSpeed
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 4797881365167970315, guid: b98d6e3caefd6684cade68e9c60da334, type: 3}
       propertyPath: ref_move
       value: 
@@ -350,7 +349,7 @@ PrefabInstance:
     - target: {fileID: 5241463192934333340, guid: b98d6e3caefd6684cade68e9c60da334, type: 3}
       propertyPath: moveManager
       value: 
-      objectReference: {fileID: 2048932815}
+      objectReference: {fileID: 2048932816}
     - target: {fileID: 5241463192934333340, guid: b98d6e3caefd6684cade68e9c60da334, type: 3}
       propertyPath: controlState
       value: 0
@@ -418,10 +417,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5850923541879517283, guid: b98d6e3caefd6684cade68e9c60da334, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2048932815}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b98d6e3caefd6684cade68e9c60da334, type: 3}
 --- !u!1 &1239952897
 GameObject:
@@ -1138,25 +1134,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2eb9c4a2d6e5e9e47942af53370553bc, type: 3}
---- !u!1 &2048932810 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5850923541879517283, guid: b98d6e3caefd6684cade68e9c60da334, type: 3}
+--- !u!114 &2048932816 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1446578481571838109, guid: b98d6e3caefd6684cade68e9c60da334, type: 3}
   m_PrefabInstance: {fileID: 762804530}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2048932815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2048932810}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9eee14a2f3cb39c4292e4df7d9faa2db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 707754838}
-  moveSpeed: 0.1
 --- !u!1 &2143528652
 GameObject:
   m_ObjectHideFlags: 0

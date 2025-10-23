@@ -1,14 +1,25 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class MoveManager : MonoBehaviour
 {
-    [SerializeField] CapsuleCollider player;
+    [SerializeField] PlayerObject player;
     [SerializeField] float moveSpeed;
     private GameManager gm;
+
+    void Awake()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        player = Object.FindFirstObjectByType<PlayerObject>();
+    }
 
     void Start()
     {
         gm = GameManager.instance;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        player = Object.FindFirstObjectByType<PlayerObject>();
     }
 
     public void Move(Vector2 movement)
