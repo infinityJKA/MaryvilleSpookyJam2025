@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] SpookyInputManager inputManager;
     public DialogueManager dialogueManager;
+    public MoveManager moveManager;
 
     public static GameManager instance;
     public ControlState controlState;
@@ -32,7 +33,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        dialogueManager.StartDialogue(testLines);
+        //dialogueManager.StartDialogue(testLines);
     }
 
 }
