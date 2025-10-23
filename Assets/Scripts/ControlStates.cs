@@ -1,4 +1,4 @@
 public enum ControlState
 {
-    Overworld, Dialogue, Menu, NoControls
+    Overworld, Dialogue, InventoryMenu, NoControls
 }

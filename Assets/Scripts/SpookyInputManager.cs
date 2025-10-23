@@ -40,10 +40,13 @@ public class SpookyInputManager : MonoBehaviour
 
     private void action_RETURN(InputAction.CallbackContext obj)
     {
-        if (gm.controlState == ControlState.Menu)
+        if (gm.controlState == ControlState.InventoryMenu)
         {
-            // exit menu
-            Debug.Log("RETURN (state = menu)");
+            gm.inventoryManager.CloseInventory();
+        }
+        else if(gm.controlState == ControlState.Overworld)
+        {
+            gm.inventoryManager.OpenInventory();
         }
     }
 

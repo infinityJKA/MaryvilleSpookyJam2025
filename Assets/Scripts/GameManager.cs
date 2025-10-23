@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using NUnit.Framework.Internal;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -8,9 +7,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] SpookyInputManager inputManager;
     public DialogueManager dialogueManager;
     public MoveManager moveManager;
+    public InventoryManager inventoryManager;
 
     public static GameManager instance;
     public ControlState controlState;
+    
+    
+
 
     // [Header("TESTING")]
     // public List<DialogueLine> testLines;
