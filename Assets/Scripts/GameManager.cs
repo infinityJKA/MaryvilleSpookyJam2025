@@ -12,8 +12,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public ControlState controlState;
 
-    [Header("TESTING")]
-    public List<DialogueLine> testLines;
+    // [Header("TESTING")]
+    // public List<DialogueLine> testLines;
 
     void Awake()
     {
