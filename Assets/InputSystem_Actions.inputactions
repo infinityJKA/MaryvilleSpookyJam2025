@@ -48,8 +48,30 @@
                 },
                 {
                     "name": "",
+                    "id": "fdf55d86-2ffb-4c26-90be-719db9ebd870",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "35bf9ea3-af95-4fea-bec4-5cb55e926a79",
                     "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Return",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c9373665-079f-4cae-b2fb-f5abf539d25b",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
