@@ -19,6 +19,7 @@ public class MoveManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        Debug.Log("MoveManager OnSceneLoaded()");
         player = Object.FindFirstObjectByType<PlayerObject>();
     }
 
@@ -28,11 +29,28 @@ public class MoveManager : MonoBehaviour
         
         Quaternion targetRotation = Quaternion.LookRotation(playerMove);
         player.transform.rotation = targetRotation;
+
+        if(player.mirroedObjects.Count > 0)
+        {
+            foreach(GameObject m in player.mirroedObjects)
+            {
+                m.transform.rotation = targetRotation;
+            }
+        }
+
         Debug.Log("targetRotation: " + targetRotation);
 
         //playerMove.Normalize();
         //playerMove = playerMove * moveSpeed;
         playerMove = Vector3.forward * moveSpeed;
         player.transform.Translate(playerMove);
+
+        if (player.mirroedObjects.Count > 0)
+        {
+            foreach (GameObject m in player.mirroedObjects)
+            {
+                m.transform.Translate(playerMove);
+            }
+        }
     }
 }

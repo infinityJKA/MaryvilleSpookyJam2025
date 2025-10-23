@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class SpookyInputManager : MonoBehaviour
 {
@@ -16,12 +17,15 @@ public class SpookyInputManager : MonoBehaviour
         ref_move.action.Enable();
     }
 
-    void OnDisable()
-    {
-        ref_select.action.started -= action_SELECT;
-        ref_return.action.started -= action_RETURN;
-        ref_move.action.Disable();
-    }
+    //void OnDisable()
+    //{
+    //    ref_select.action.started -= action_SELECT;
+    //    ref_return.action.started -= action_RETURN;
+    //    ref_move.action.Disable();
+    //    Debug.Log("OnDisable spookyinput");
+    //}
+
+
 
     private void action_SELECT(InputAction.CallbackContext obj)
     {
@@ -52,6 +56,7 @@ public class SpookyInputManager : MonoBehaviour
         if (gm.controlState == ControlState.Overworld)
         {
             Vector2 moveValue = ref_move.action.ReadValue<Vector2>();
+            Debug.Log("moveValue " + moveValue);
             if (moveValue != Vector2.zero)
             {
                 gm.moveManager.Move(moveValue);
