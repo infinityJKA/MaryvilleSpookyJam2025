@@ -49,7 +49,7 @@ public class MoveManager : MonoBehaviour
         {
             foreach (GameObject m in player.mirroedObjects)
             {
-                m.transform.Translate(playerMove);
+                m.transform.Translate(playerMove*-1);
             }
         }
     }
