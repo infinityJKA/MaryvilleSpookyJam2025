@@ -77,7 +77,7 @@ public class DialogueManager : MonoBehaviour
             }
             else // if line is something to print normally
             {
-                gm.audioManager.PlaySfx("click");
+                //gm.audioManager.PlaySfx("click");
                 textObject.text = "";
                 dialogueBox.SetActive(true);
                 dialogueTriangle.SetActive(false);
@@ -142,6 +142,7 @@ public class DialogueManager : MonoBehaviour
         {
             if (dialogueAnimSkipped) { break; }
             textObject.text += c;
+            if(c != ' ') gm.audioManager.PlaySfxRandomPitch("shortClick");
             yield return new WaitForSeconds(textSpeed);
         }
         dialogueTriangle.SetActive(true);

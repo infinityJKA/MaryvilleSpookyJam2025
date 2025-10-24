@@ -26,6 +26,20 @@ public class AudioManager : MonoBehaviour
         else
         {
             sfxSource.clip = s.audio;
+            sfxSource.pitch = 1;
+            sfxSource.Play();
+        }
+    }
+
+    public void PlaySfxRandomPitch(string name)
+    {
+        SoundObj s = Array.Find(sfx, x => x.id == name);
+
+        if (s == null) Debug.Log("Sfx not found");
+        else
+        {
+            sfxSource.clip = s.audio;
+            sfxSource.pitch = UnityEngine.Random.Range(-1.5f, 1.5f);
             sfxSource.Play();
         }
     }

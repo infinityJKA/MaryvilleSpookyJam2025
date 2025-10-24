@@ -1120,6 +1120,8 @@ MonoBehaviour:
   sfx:
   - id: click
     audio: {fileID: 8300000, guid: edc2ab0360e111e4fa149eb629e8fae0, type: 3}
+  - id: shortClick
+    audio: {fileID: 8300000, guid: 4731e3ef05d4d6b47b968a4a7270a8c8, type: 3}
   music: []
   musicSource: {fileID: 6687916313045363840}
   sfxSource: {fileID: 7662435055948728594}
