@@ -4,6 +4,7 @@ public class MoveManager : MonoBehaviour
 {
     [SerializeField] PlayerObject player;
     [SerializeField] float moveSpeed;
+    [SerializeField] Camera freelookCamera;
     private GameManager gm;
 
     void Awake()
@@ -26,8 +27,10 @@ public class MoveManager : MonoBehaviour
     public void Move(Vector2 movement)
     {
         Vector3 playerMove = new Vector3(movement.x, 0f, movement.y);
-        
-        Quaternion targetRotation = Quaternion.LookRotation(playerMove);
+        Vector3 screenForward = new Vector3(freelookCamera.transform.forward.x, 0, freelookCamera.transform.forward.z);
+
+        Quaternion targetRotation = Quaternion.LookRotation(screenForward);
+        targetRotation *= Quaternion.LookRotation(playerMove);
         player.transform.rotation = targetRotation;
 
         if(player.mirroedObjects.Count > 0)
@@ -43,6 +46,9 @@ public class MoveManager : MonoBehaviour
         //playerMove.Normalize();
         //playerMove = playerMove * moveSpeed;
         playerMove = Vector3.forward * moveSpeed;
+        //Vector3 screenForward = new Vector3(freelookCamera.transform.forward.x, 0, freelookCamera.transform.forward.z);
+        //player.transform.forward = screenForward;
+        //playerMove = screenForward * moveSpeed;
         player.transform.Translate(playerMove);
 
         if (player.mirroedObjects.Count > 0)
