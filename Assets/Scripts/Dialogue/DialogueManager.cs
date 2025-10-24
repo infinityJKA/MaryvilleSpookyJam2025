@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
@@ -124,6 +125,11 @@ public class DialogueManager : MonoBehaviour
         else if(line.command == "FLAG")
         {
             Debug.Log("Flag");
+            RunDialogue();
+        }
+        else if(line.command == "SCENE")
+        {
+            SceneManager.LoadScene(line.dialogueText);
             RunDialogue();
         }
     }

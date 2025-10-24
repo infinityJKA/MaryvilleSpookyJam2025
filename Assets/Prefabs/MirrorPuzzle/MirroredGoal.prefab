@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &608302446935299841
+--- !u!1 &673762171795009904
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7004131043502066055}
-  - component: {fileID: 1744382436566510285}
-  - component: {fileID: 564430539502323161}
-  - component: {fileID: 9023136965012123243}
-  - component: {fileID: 7405954760450679640}
+  - component: {fileID: 1056297885613616060}
+  - component: {fileID: 6636748031798634926}
+  - component: {fileID: 5226447741399638817}
+  - component: {fileID: 2911581497549681480}
+  - component: {fileID: 2925160406194823805}
   m_Layer: 0
-  m_Name: DangerousToMirrored
+  m_Name: MirroredGoal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7004131043502066055
+--- !u!4 &1056297885613616060
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 608302446935299841}
+  m_GameObject: {fileID: 673762171795009904}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.83, z: 8.01}
+  m_LocalPosition: {x: 3.28, y: 0.83, z: -5.21}
   m_LocalScale: {x: 2.86507, y: 5.4357295, z: 2.8996446}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1744382436566510285
+--- !u!33 &6636748031798634926
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 608302446935299841}
+  m_GameObject: {fileID: 673762171795009904}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &564430539502323161
+--- !u!23 &5226447741399638817
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 608302446935299841}
+  m_GameObject: {fileID: 673762171795009904}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bb3818e7ded2f1842ae78b7108b5977e, type: 2}
+  - {fileID: 2100000, guid: 163dac2ae19733a43be90aca4d226959, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -88,13 +88,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &9023136965012123243
+--- !u!65 &2911581497549681480
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 608302446935299841}
+  m_GameObject: {fileID: 673762171795009904}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -109,15 +109,32 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7405954760450679640
+--- !u!114 &2925160406194823805
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 608302446935299841}
+  m_GameObject: {fileID: 673762171795009904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27a83c1f8bc9cc44abdee74d71574119, type: 3}
+  m_Script: {fileID: 11500000, guid: 432855dc511a8e740a250d9574fa069e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogue:
+  - command: 
+    dialogueText: You reached the goal!
+    commandObject: {fileID: 0}
+    multichoice: []
+  - command: SCENE
+    dialogueText: MirrorPuzzle2
+    commandObject: {fileID: 0}
+    multichoice: []
+  - command: 
+    dialogueText: Scene should be changed now.
+    commandObject: {fileID: 0}
+    multichoice: []
+  - command: END
+    dialogueText: 
+    commandObject: {fileID: 0}
+    multichoice: []
