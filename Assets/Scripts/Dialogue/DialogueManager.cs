@@ -73,9 +73,11 @@ public class DialogueManager : MonoBehaviour
             {
                 Debug.Log("DialogueLine is a command");
                 PerformCommand(line);
+
             }
             else // if line is something to print normally
             {
+                gm.audioManager.PlaySfx("click");
                 textObject.text = "";
                 dialogueBox.SetActive(true);
                 dialogueTriangle.SetActive(false);

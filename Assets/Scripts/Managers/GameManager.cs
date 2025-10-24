@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public DialogueManager dialogueManager;
     public MoveManager moveManager;
     public InventoryManager inventoryManager;
+    public AudioManager audioManager;
 
     public static GameManager instance;
     public ControlState controlState;
