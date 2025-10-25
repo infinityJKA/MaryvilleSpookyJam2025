@@ -61,7 +61,7 @@ public class DialogueManager : MonoBehaviour
 
     public void RunDialogue() // This is the main function for handeling dialogue stuff
     {
-        Debug.Log("RunDialogue with index of " + dialogueIndex);
+        //Debug.Log("RunDialogue with index of " + dialogueIndex);
         if (dialogueIndex == -1 || usedCommand || dialogueAnimSkipped || currentDialogue[dialogueIndex].dialogueText == textObject.text) // check if finished writing or skipped before writing again
         {
             gm.controlState = ControlState.NoControls;
@@ -72,7 +72,7 @@ public class DialogueManager : MonoBehaviour
 
             if (line.command != "") // if line is a command
             {
-                Debug.Log("DialogueLine is a command");
+                //Debug.Log("DialogueLine is a command");
                 PerformCommand(line);
 
             }
@@ -142,7 +142,7 @@ public class DialogueManager : MonoBehaviour
             float x = plyr.position.x - obj.position.x;
             float y = plyr.position.z - obj.position.z;
             Vector3 moveTo;
-            float moveAmount = 4f;
+            float moveAmount = 3f;
             if (math.abs(x) > math.abs(y))
             {
                 if (x > 0) moveTo = obj.position + Vector3.left * moveAmount;

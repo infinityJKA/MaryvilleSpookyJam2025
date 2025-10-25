@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MirrorPuzzle/MirrorPuzzle4.unity
     guid: 61dead3ba011b1f4081923bc4aaaf3c2
+  - enabled: 1
+    path: Assets/Scenes/PushPuzzle.unity
+    guid: 47be5f6dfc944dc41b3eb9eb6f323325
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
