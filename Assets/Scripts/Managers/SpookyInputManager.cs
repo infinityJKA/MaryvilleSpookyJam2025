@@ -35,7 +35,7 @@ public class SpookyInputManager : MonoBehaviour
         }
         else if (gm.controlState == ControlState.Overworld)
         {
-            if (gm.interactableObject != null) gm.dialogueManager.StartDialogue(gm.interactableObject.dialogue);   
+            if (gm.interactableObject != null && gm.interactableObject.canInteract) gm.dialogueManager.StartDialogue(gm.interactableObject.dialogue);   
         }
     }
 
@@ -56,11 +56,11 @@ public class SpookyInputManager : MonoBehaviour
         if (gm.controlState == ControlState.Overworld)
         {
             Vector2 moveValue = ref_move.action.ReadValue<Vector2>();
-            Debug.Log("moveValue " + moveValue);
+            //Debug.Log("moveValue " + moveValue);
             if (moveValue != Vector2.zero)
             {
                 gm.moveManager.Move(moveValue);
-                Debug.Log("RETURN (state = overworld)");
+                //Debug.Log("RETURN (state = overworld)");
             }
         }
     }

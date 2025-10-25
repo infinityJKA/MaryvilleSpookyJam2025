@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -124,14 +125,41 @@ public class DialogueManager : MonoBehaviour
 
             multichoiceParent.SetActive(true);
         }
-        else if(line.command == "FLAG")
+        else if (line.command == "FLAG")
         {
             Debug.Log("Flag");
             RunDialogue();
         }
-        else if(line.command == "SCENE")
+        else if (line.command == "SCENE")
         {
             SceneManager.LoadScene(line.dialogueText);
+            RunDialogue();
+        }
+        else if (line.command == "PUSH")
+        {
+            Transform obj = line.commandObject.transform;
+            Transform plyr = gm.moveManager.player.gameObject.transform;
+            float x = plyr.position.x - obj.position.x;
+            float y = plyr.position.z - obj.position.z;
+            Vector3 moveTo;
+            float moveAmount = 4f;
+            if (math.abs(x) > math.abs(y))
+            {
+                if (x > 0) moveTo = obj.position + Vector3.left * moveAmount;
+                else moveTo = obj.position + Vector3.right * moveAmount;
+            }
+            else
+            {
+                if (y > 0) moveTo = obj.position + Vector3.back * moveAmount;
+                else moveTo = obj.position + Vector3.forward * moveAmount;
+            }
+
+            InteractableObject intr = obj.transform.GetComponent<InteractableObject>();
+            intr.moveTo = moveTo;
+            intr.canInteract = false;
+            intr.moving = true;
+
+
             RunDialogue();
         }
     }

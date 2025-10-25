@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MoveManager : MonoBehaviour
 {
-    [SerializeField] PlayerObject player;
+    public PlayerObject player;
     [SerializeField] float moveSpeed;
     [SerializeField] Camera freelookCamera;
     private GameManager gm;
@@ -41,7 +41,7 @@ public class MoveManager : MonoBehaviour
             }
         }
 
-        Debug.Log("targetRotation: " + targetRotation);
+        //Debug.Log("targetRotation: " + targetRotation);
 
         //playerMove.Normalize();
         //playerMove = playerMove * moveSpeed;
