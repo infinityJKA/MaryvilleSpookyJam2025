@@ -54,13 +54,17 @@ public class SpookyInputManager : MonoBehaviour
     private void Update()
     {
         if (gm.controlState == ControlState.Overworld)
-        {
+        {  
             Vector2 moveValue = ref_move.action.ReadValue<Vector2>();
             //Debug.Log("moveValue " + moveValue);
             if (moveValue != Vector2.zero)
             {
                 gm.moveManager.Move(moveValue);
                 //Debug.Log("RETURN (state = overworld)");
+            }
+            else
+            {
+                gm.moveManager.StopWalkSound();
             }
         }
     }

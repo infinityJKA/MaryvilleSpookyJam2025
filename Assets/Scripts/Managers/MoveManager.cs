@@ -6,6 +6,7 @@ public class MoveManager : MonoBehaviour
     [SerializeField] float moveSpeed;
     [SerializeField] Camera freelookCamera;
     private GameManager gm;
+    private AudioSource walkSound;
 
     void Awake()
     {
@@ -22,10 +23,15 @@ public class MoveManager : MonoBehaviour
     {
         Debug.Log("MoveManager OnSceneLoaded()");
         player = Object.FindFirstObjectByType<PlayerObject>();
+        walkSound = player.gameObject.GetComponent<AudioSource>();
     }
 
     public void Move(Vector2 movement)
     {
+        if (!walkSound.isPlaying)
+        {
+            walkSound.Play();
+        }
         Vector3 playerMove = new Vector3(movement.x, 0f, movement.y);
         Vector3 screenForward = new Vector3(freelookCamera.transform.forward.x, 0, freelookCamera.transform.forward.z);
 
@@ -58,5 +64,10 @@ public class MoveManager : MonoBehaviour
                 m.transform.Translate(playerMove*-1);
             }
         }
+    }
+
+    public void StopWalkSound()
+    {
+        walkSound.Stop();
     }
 }
