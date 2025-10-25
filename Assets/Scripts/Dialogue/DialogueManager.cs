@@ -123,6 +123,8 @@ public class DialogueManager : MonoBehaviour
                 b.flag = m.flagName;
             }
 
+            //gm.eventSystem.SetSelectedGameObject(multichoiceParent.transform.GetChild(0).gameObject);
+
             multichoiceParent.SetActive(true);
         }
         else if (line.command == "FLAG")
