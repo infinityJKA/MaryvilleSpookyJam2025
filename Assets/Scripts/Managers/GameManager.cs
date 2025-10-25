@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class GameManager : MonoBehaviour
     public MoveManager moveManager;
     public InventoryManager inventoryManager;
     public AudioManager audioManager;
+
+    public EventSystem eventSystem;
 
     public static GameManager instance;
     public ControlState controlState;
