@@ -176,7 +176,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b98d6e3caefd6684cade68e9c60da334, type: 3}
---- !u!1 &798493328
+--- !u!1 &1072330426
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -184,25 +184,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 798493333}
-  - component: {fileID: 798493332}
-  - component: {fileID: 798493331}
-  - component: {fileID: 798493330}
-  - component: {fileID: 798493329}
+  - component: {fileID: 1072330431}
+  - component: {fileID: 1072330430}
+  - component: {fileID: 1072330429}
+  - component: {fileID: 1072330428}
+  - component: {fileID: 1072330427}
   m_Layer: 6
-  m_Name: PickupItem
+  m_Name: CodeInteract
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &798493329
+--- !u!114 &1072330427
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 798493328}
+  m_GameObject: {fileID: 1072330426}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9042f2ced68a424d902d4ad07ff258f, type: 3}
@@ -210,14 +210,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - command: 
-    dialogueText: '[You picked up the test item...]'
+    dialogueText: enter my code
     commandObject: {fileID: 0}
     multichoice: []
     sfxToPlay:
       id: 
       audio: {fileID: 0}
-  - command: GET ITEM
-    dialogueText: 
+  - command: ENTER CODE
+    dialogueText: 12345
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+  - command: FLAG
+    dialogueText: correct code
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+  - command: 
+    dialogueText: Code was correct!
     commandObject: {fileID: 0}
     multichoice: []
     sfxToPlay:
@@ -230,20 +244,41 @@ MonoBehaviour:
     sfxToPlay:
       id: 
       audio: {fileID: 0}
-  placedItem: {fileID: 11400000, guid: 94a40358d2b593c409b4f98864bf2ab6, type: 2}
+  - command: FLAG
+    dialogueText: wrong code
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+  - command: 
+    dialogueText: Wrong code, buddy.
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+  - command: END
+    dialogueText: 
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+  placedItem: {fileID: 0}
   placedObject: {fileID: 0}
   placeObjectPoint: {fileID: 0}
   moveTo: {x: 0, y: 0, z: 0}
   canInteract: 1
   moving: 0
   speed: 0
---- !u!65 &798493330
+--- !u!65 &1072330428
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 798493328}
+  m_GameObject: {fileID: 1072330426}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -258,13 +293,13 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &798493331
+--- !u!23 &1072330429
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 798493328}
+  m_GameObject: {fileID: 1072330426}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -281,7 +316,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bff191c1cdd15dc4d83b5cee6ef4bf00, type: 2}
+  - {fileID: 2100000, guid: 4023e3abffe9dc5438454d5fcf728acc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -303,24 +338,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &798493332
+--- !u!33 &1072330430
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 798493328}
+  m_GameObject: {fileID: 1072330426}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &798493333
+--- !u!4 &1072330431
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 798493328}
+  m_GameObject: {fileID: 1072330426}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.05, y: 0.99, z: 13.7}
+  m_LocalPosition: {x: 4.23, y: 0.999, z: 19.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -819,6 +854,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90a50809928cc854aac74f627f8fc40b, type: 3}
+--- !u!1001 &5774100584308191101
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5907985038308100429, guid: 188f88c092e1ae943909aa3fa72e45cb, type: 3}
+      propertyPath: m_Name
+      value: PickupItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619330425738834323, guid: 188f88c092e1ae943909aa3fa72e45cb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619330425738834323, guid: 188f88c092e1ae943909aa3fa72e45cb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619330425738834323, guid: 188f88c092e1ae943909aa3fa72e45cb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 13.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619330425738834323, guid: 188f88c092e1ae943909aa3fa72e45cb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619330425738834323, guid: 188f88c092e1ae943909aa3fa72e45cb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619330425738834323, guid: 188f88c092e1ae943909aa3fa72e45cb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619330425738834323, guid: 188f88c092e1ae943909aa3fa72e45cb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619330425738834323, guid: 188f88c092e1ae943909aa3fa72e45cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619330425738834323, guid: 188f88c092e1ae943909aa3fa72e45cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619330425738834323, guid: 188f88c092e1ae943909aa3fa72e45cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 188f88c092e1ae943909aa3fa72e45cb, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -828,5 +920,6 @@ SceneRoots:
   - {fileID: 792170866}
   - {fileID: 1666344025}
   - {fileID: 5069957724250845319}
-  - {fileID: 798493333}
+  - {fileID: 5774100584308191101}
   - {fileID: 2096164674}
+  - {fileID: 1072330431}

@@ -17,6 +17,8 @@ public class DialogueManager : MonoBehaviour
     public TMP_Text textObject;
     public GameObject multichoiceParent;
     public MultichoiceButton multichoiceButtonPrefab;
+    public GameObject inputParent;
+    public TMP_InputField inputField;
 
     [Header("Automatically assigned through code")]
     public int dialogueIndex;
@@ -24,6 +26,7 @@ public class DialogueManager : MonoBehaviour
     public bool dialogueAnimSkipped, usedCommand;
     public InteractableObject currentInteractableObject;
     public String commandDialogueText;
+    public String correctCode;
     private GameManager gm;
 
     void Start()
@@ -251,6 +254,11 @@ public class DialogueManager : MonoBehaviour
             dialogueCanvas.SetActive(false);
             gm.controlState = ControlState.Overworld;
         }
+        else if (line.command == "ENTER CODE"){
+            inputField.text = "";
+            correctCode = line.dialogueText;
+            inputParent.SetActive(true);
+        }
     }
 
     private IEnumerator TypeLine(String l)
@@ -264,17 +272,17 @@ public class DialogueManager : MonoBehaviour
         }
         dialogueTriangle.SetActive(true);
     }
-    
+
     public void GoToFlag(String flag)
     {
-        Debug.Log("GoToFlag("+flag+")");
+        Debug.Log("GoToFlag(" + flag + ")");
         multichoiceParent.SetActive(false);
 
         bool found = false;
         int ind = 0;
         while (!found)
         {
-            if(ind >= currentDialogue.Count)
+            if (ind >= currentDialogue.Count)
             {
                 Debug.Log("FLAG NOT FOUND");
                 break;
@@ -289,6 +297,25 @@ public class DialogueManager : MonoBehaviour
 
         dialogueIndex = ind - 1;
         RunDialogue();
+    }
+    
+    public void CodeButtonPress()
+    {
+        inputParent.SetActive(false);
+
+        Debug.Log("code entered is " + inputField.text);
+        Debug.Log("correct code is " + correctCode);
+
+        if (inputField.text == correctCode)
+        {
+            Debug.Log("code is correct");
+            GoToFlag("correct code");
+        }
+        else
+        {
+            Debug.Log("code is wrong");
+            GoToFlag("wrong code");
+        }
     }
 
 }
