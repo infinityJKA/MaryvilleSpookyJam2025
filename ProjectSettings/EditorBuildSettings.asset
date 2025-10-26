@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ballroom.unity
     guid: 2a4e274e982a6764ab7d1660072264b9
+  - enabled: 1
+    path: Assets/Scenes/PlacePuzzle.unity
+    guid: b090c2f9e2013b64dbd11a0dbef41778
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

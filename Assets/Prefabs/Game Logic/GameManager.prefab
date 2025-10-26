@@ -1296,6 +1296,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6533381250102606791}
   - {fileID: 2450363237287823659}
   - {fileID: 159551362933651680}
   - {fileID: 7302852629482597372}
@@ -1432,6 +1433,73 @@ MonoBehaviour:
   eventSystem: {fileID: 2514349954281602555}
   controlState: 0
   interactableObject: {fileID: 0}
+  introDialogue:
+  - command: ENABLE BLACK
+    dialogueText: 
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+  - command: 
+    dialogueText: "It\u2019s been an hour since I arrived at the Belladona Ball,
+      and I can\u2019t help but feel that something is off."
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+  - command: 
+    dialogueText: The guest's laughter and dancing seem hollow, a performance put
+      on for someone else.
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+  - command: 
+    dialogueText: An hour and still no sign of Cerise...
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+  - command: DISABLE BLACK
+    dialogueText: 
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+  - command: SCENE
+    dialogueText: Ballroom
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+  - command: 
+    dialogueText: "Cerise swore she\u2019d meet me here at the entrance, maybe I
+      got it wrong?"
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+  - command: 
+    dialogueText: I should go look for her.
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+  - command: END
+    dialogueText: 
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
 --- !u!114 &4797881365167970315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1469,105 +1537,9 @@ MonoBehaviour:
   multichoiceButtonPrefab: {fileID: 623498265812619792, guid: 7ad1cdad226d017448f6b7427afa81d5, type: 3}
   inputParent: {fileID: 1842217115537207685}
   inputField: {fileID: 9031480965061405408}
+  blackBg: {fileID: 5960845733627460111}
   dialogueIndex: -1
-  currentDialogue:
-  - command: FLAG
-    dialogueText: start
-    commandObject: {fileID: 0}
-    multichoice: []
-    sfxToPlay:
-      id: 
-      audio: {fileID: 0}
-  - command: 
-    dialogueText: The next dialogue will be a multichoice
-    commandObject: {fileID: 0}
-    multichoice: []
-    sfxToPlay:
-      id: 
-      audio: {fileID: 0}
-  - command: MULTI
-    dialogueText: 
-    commandObject: {fileID: 0}
-    multichoice:
-    - buttonText: Option1
-      flagName: 1
-    - buttonText: Option2
-      flagName: 2
-    - buttonText: Option3
-      flagName: 3
-    sfxToPlay:
-      id: 
-      audio: {fileID: 0}
-  - command: 
-    dialogueText: You're not supposed to see this text!
-    commandObject: {fileID: 0}
-    multichoice: []
-    sfxToPlay:
-      id: 
-      audio: {fileID: 0}
-  - command: FLAG
-    dialogueText: 1
-    commandObject: {fileID: 0}
-    multichoice: []
-    sfxToPlay:
-      id: 
-      audio: {fileID: 0}
-  - command: 
-    dialogueText: You chose the first option!
-    commandObject: {fileID: 0}
-    multichoice: []
-    sfxToPlay:
-      id: 
-      audio: {fileID: 0}
-  - command: SENDTO
-    dialogueText: start
-    commandObject: {fileID: 0}
-    multichoice: []
-    sfxToPlay:
-      id: 
-      audio: {fileID: 0}
-  - command: FLAG
-    dialogueText: 2
-    commandObject: {fileID: 0}
-    multichoice: []
-    sfxToPlay:
-      id: 
-      audio: {fileID: 0}
-  - command: 
-    dialogueText: You chose the second option!
-    commandObject: {fileID: 0}
-    multichoice: []
-    sfxToPlay:
-      id: 
-      audio: {fileID: 0}
-  - command: SENDTO
-    dialogueText: start
-    commandObject: {fileID: 0}
-    multichoice: []
-    sfxToPlay:
-      id: 
-      audio: {fileID: 0}
-  - command: FLAG
-    dialogueText: 3
-    commandObject: {fileID: 0}
-    multichoice: []
-    sfxToPlay:
-      id: 
-      audio: {fileID: 0}
-  - command: 
-    dialogueText: You chose the third option!
-    commandObject: {fileID: 0}
-    multichoice: []
-    sfxToPlay:
-      id: 
-      audio: {fileID: 0}
-  - command: SENDTO
-    dialogueText: start
-    commandObject: {fileID: 0}
-    multichoice: []
-    sfxToPlay:
-      id: 
-      audio: {fileID: 0}
+  currentDialogue: []
   dialogueAnimSkipped: 0
   usedCommand: 0
   currentInteractableObject: {fileID: 0}
@@ -2147,6 +2119,81 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &7988550968626173586
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6533381250102606791}
+  - component: {fileID: 3750801823654244919}
+  - component: {fileID: 5960845733627460111}
+  m_Layer: 5
+  m_Name: BlackBg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6533381250102606791
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988550968626173586}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4356173061715012670}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.00012207, y: -0.0007019}
+  m_SizeDelta: {x: 800, y: 450.12}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &3750801823654244919
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988550968626173586}
+  m_CullTransparentMesh: 1
+--- !u!114 &5960845733627460111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988550968626173586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.017621916, g: 0.026780263, b: 0.03773582, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &8560935708941103799
 GameObject:
   m_ObjectHideFlags: 0
@@ -2642,6 +2689,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5876814596126568575}
     m_Modifications:
+    - target: {fileID: 144306474080969263, guid: 2eb9c4a2d6e5e9e47942af53370553bc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -30.160002
+      objectReference: {fileID: 0}
     - target: {fileID: 2849898397537953541, guid: 2eb9c4a2d6e5e9e47942af53370553bc, type: 3}
       propertyPath: m_Name
       value: CameraStuff

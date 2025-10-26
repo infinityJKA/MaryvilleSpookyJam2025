@@ -19,6 +19,7 @@ public class DialogueManager : MonoBehaviour
     public MultichoiceButton multichoiceButtonPrefab;
     public GameObject inputParent;
     public TMP_InputField inputField;
+    public Image blackBg;
 
     [Header("Automatically assigned through code")]
     public int dialogueIndex;
@@ -50,6 +51,8 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(List<DialogueLine> lines, InteractableObject currentInteractableObject)
     {
+        Debug.Log("StartDialogue()");
+
         dialogueIndex = -1;
         currentDialogue = lines;
         this.currentInteractableObject = currentInteractableObject;
@@ -254,11 +257,56 @@ public class DialogueManager : MonoBehaviour
             dialogueCanvas.SetActive(false);
             gm.controlState = ControlState.Overworld;
         }
-        else if (line.command == "ENTER CODE"){
+        else if (line.command == "ENTER CODE")
+        {
             inputField.text = "";
             correctCode = line.dialogueText;
             inputParent.SetActive(true);
         }
+        else if (line.command == "ENABLE BLACK")
+        {
+            StartCoroutine(FadeInBlack());
+        }
+        else if (line.command == "DISABLE BLACK")
+        {
+            StartCoroutine(FadeOutBlack());
+        }
+        else if(line.command == "WAIT")
+        {
+            StartCoroutine(DialogueWait(int.Parse(line.dialogueText)));
+        }
+    }
+
+    private IEnumerator DialogueWait(float t)
+    {
+        yield return new WaitForSeconds(t);
+        RunDialogue();
+    }
+
+    private IEnumerator FadeInBlack()
+    {
+        Debug.Log("FadeInBlack");
+        while (blackBg.color.a < 1)
+        {
+            Debug.Log("BlackBg.color.a == " + blackBg.color.a);
+            var tempColor = blackBg.color;
+            tempColor.a += 0.03f;
+            blackBg.color = tempColor;
+            yield return new WaitForSeconds(0.07f);
+        }
+        RunDialogue();
+    }
+    
+    private IEnumerator FadeOutBlack()
+    {
+        while (blackBg.color.a > 0)
+        {
+            var tempColor = blackBg.color;
+            tempColor.a -= 0.03f;
+            blackBg.color = tempColor;
+            yield return new WaitForSeconds(0.07f);
+        }
+        RunDialogue();
     }
 
     private IEnumerator TypeLine(String l)

@@ -23,7 +23,7 @@ public class MoveManager : MonoBehaviour
     {
         Debug.Log("MoveManager OnSceneLoaded()");
         player = Object.FindFirstObjectByType<PlayerObject>();
-        walkSound = player.gameObject.GetComponent<AudioSource>();
+        if(player != null) walkSound = player.gameObject.GetComponent<AudioSource>();
     }
 
     public void Move(Vector2 movement)

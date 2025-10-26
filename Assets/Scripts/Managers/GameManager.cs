@@ -16,8 +16,10 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public ControlState controlState;
     public InteractableObject interactableObject;
-    
-    
+
+    public List<DialogueLine> introDialogue;
+
+
 
 
     // [Header("TESTING")]
@@ -42,6 +44,12 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         //dialogueManager.StartDialogue(testLines);
+    }
+
+    public void IntroCutscene()
+    {
+        Debug.Log("IntroCutscene()");
+        dialogueManager.StartDialogue(introDialogue,null);
     }
 
 }
