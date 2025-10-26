@@ -10,7 +10,7 @@ public class MirroredGoal : MonoBehaviour
         Debug.Log("Collided with layer: " + collision.gameObject.tag);
         if (collision.gameObject.CompareTag("Mirrored"))
         {
-            GameManager.instance.dialogueManager.StartDialogue(dialogue);
+            GameManager.instance.dialogueManager.StartDialogue(dialogue, null);
         }
     }
 }

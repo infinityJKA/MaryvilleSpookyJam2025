@@ -22,6 +22,8 @@ public class DialogueManager : MonoBehaviour
     public int dialogueIndex;
     public List<DialogueLine> currentDialogue;
     public bool dialogueAnimSkipped, usedCommand;
+    public InteractableObject currentInteractableObject;
+    public String commandDialogueText;
     private GameManager gm;
 
     void Start()
@@ -29,10 +31,11 @@ public class DialogueManager : MonoBehaviour
         gm = GameManager.instance;
     }
 
-    public void StartDialogue(List<DialogueLine> lines, int index)
+    public void StartDialogue(List<DialogueLine> lines, int index, InteractableObject currentInteractableObject)
     {
         dialogueIndex = index;
         currentDialogue = lines;
+        this.currentInteractableObject = currentInteractableObject;
 
         gm.controlState = ControlState.NoControls;
 
@@ -42,10 +45,11 @@ public class DialogueManager : MonoBehaviour
         RunDialogue();
     }
 
-    public void StartDialogue(List<DialogueLine> lines)
+    public void StartDialogue(List<DialogueLine> lines, InteractableObject currentInteractableObject)
     {
         dialogueIndex = -1;
         currentDialogue = lines;
+        this.currentInteractableObject = currentInteractableObject;
         
         gm.controlState = ControlState.NoControls;
 
@@ -62,9 +66,10 @@ public class DialogueManager : MonoBehaviour
     public void RunDialogue() // This is the main function for handeling dialogue stuff
     {
         //Debug.Log("RunDialogue with index of " + dialogueIndex);
-        if (dialogueIndex == -1 || usedCommand || dialogueAnimSkipped || currentDialogue[dialogueIndex].dialogueText == textObject.text) // check if finished writing or skipped before writing again
+        if (dialogueIndex == -1 || usedCommand || dialogueAnimSkipped || currentDialogue[dialogueIndex].dialogueText == textObject.text || textObject.text == commandDialogueText) // check if finished writing or skipped before writing again
         {
             gm.controlState = ControlState.NoControls;
+            commandDialogueText = "no commandDialogueText";
             dialogueIndex++;
             dialogueAnimSkipped = false;
             usedCommand = false;
@@ -79,11 +84,7 @@ public class DialogueManager : MonoBehaviour
             else // if line is something to print normally
             {
                 //gm.audioManager.PlaySfx("click");
-                textObject.text = "";
-                dialogueBox.SetActive(true);
-                dialogueTriangle.SetActive(false);
-                gm.controlState = ControlState.Dialogue;
-                StartCoroutine(TypeLine(line.dialogueText));
+                PrintNormally(line);
             }
 
         }
@@ -91,10 +92,28 @@ public class DialogueManager : MonoBehaviour
         {
             Debug.Log("skipped dialogue anim");
             dialogueAnimSkipped = true;
-            textObject.text = currentDialogue[dialogueIndex].dialogueText;
+
+            if (commandDialogueText != "no commandDialogueText") textObject.text = commandDialogueText;
+            else textObject.text = currentDialogue[dialogueIndex].dialogueText;
+            
             dialogueTriangle.SetActive(true);
 
         }
+    }
+
+    public void PrintNormally(DialogueLine line)
+    {
+        textObject.text = "";
+        if (usedCommand)
+        {
+            commandDialogueText = line.dialogueText;
+            usedCommand = false;
+        }
+        dialogueBox.SetActive(true);
+        dialogueTriangle.SetActive(false);
+        gm.controlState = ControlState.Dialogue;
+        Debug.Log("Print normally: " + line.dialogueText);
+        StartCoroutine(TypeLine(line.dialogueText));
     }
 
     public void PerformCommand(DialogueLine line) // These are the different commands
@@ -163,6 +182,61 @@ public class DialogueManager : MonoBehaviour
 
 
             RunDialogue();
+        }
+        else if (line.command == "IF PLACED")
+        {
+            if (currentInteractableObject.placedItem != null)
+            {
+                GoToFlag(line.dialogueText);
+            }
+            else
+            {
+                RunDialogue();
+            }
+        }
+        else if (line.command == "PLACE EQUIPPED")
+        {
+            if (gm.inventoryManager.currentlySelectedItem == null)
+            {
+                PrintNormally(new DialogueLine("[You need to equip an item to place it...]"));
+            }
+            else if (gm.inventoryManager.currentlySelectedItem.canPlaced == false)
+            {
+                PrintNormally(new DialogueLine("[This item can't be placed...]"));
+            }
+            else
+            {
+                String n = gm.inventoryManager.currentlySelectedItem.itemName;
+                
+                currentInteractableObject.placedItem = gm.inventoryManager.currentlySelectedItem;
+                currentInteractableObject.placedObject = Instantiate(gm.inventoryManager.currentlySelectedItem.objectWhenPlaced, currentInteractableObject.placeObjectPoint.transform);
+
+                gm.inventoryManager.inventory.Remove(gm.inventoryManager.currentlySelectedItem);
+                gm.inventoryManager.currentlySelectedItem = null;
+
+                PrintNormally(new DialogueLine("[You placed down " + n + "]"));
+            }
+        }
+        else if (line.command == "READ PLACED")
+        {
+            if (currentInteractableObject.placedItem != null)
+            {
+                PrintNormally(new DialogueLine(currentInteractableObject.placedItem.placedInteractLine));
+            }
+            else
+            {
+                RunDialogue();
+            }
+        }
+        else if(line.command == "REMOVE PLACED")
+        {
+            String n = currentInteractableObject.placedItem.itemName;
+
+            gm.inventoryManager.inventory.Add(currentInteractableObject.placedItem);
+            Destroy(currentInteractableObject.placedObject);
+            currentInteractableObject.placedItem = null;
+
+            PrintNormally(new DialogueLine("[You picked up " + n + "]"));
         }
     }
 

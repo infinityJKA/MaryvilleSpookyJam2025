@@ -11,5 +11,9 @@ public class InventoryItem : ScriptableObject
     public String itemName;
     public Sprite sprite;
 
+    [Header("Place puzzle stuff")]
+    public bool canPlaced = false;
+    public GameObject objectWhenPlaced;
+    public String placedInteractLine;
 
 }

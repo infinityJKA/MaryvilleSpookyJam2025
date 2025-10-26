@@ -119,6 +119,199 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &53154180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 53154181}
+  - component: {fileID: 53154185}
+  - component: {fileID: 53154184}
+  - component: {fileID: 53154183}
+  - component: {fileID: 53154182}
+  m_Layer: 6
+  m_Name: Ghost (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &53154181
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53154180}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: 18.52, y: 5.0022, z: 47.15}
+  m_LocalScale: {x: 1.8166, y: 4.0044, z: 1.8436}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1962670716}
+  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+--- !u!114 &53154182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53154180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9042f2ced68a424d902d4ad07ff258f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - command: 
+    dialogueText: This is a ghost.
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+  - command: 
+    dialogueText: '"Solve my catacomb."'
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+  - command: MULTI
+    dialogueText: 
+    commandObject: {fileID: 0}
+    multichoice:
+    - buttonText: Sure
+      flagName: yes
+    - buttonText: Nah
+      flagName: no
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+  - command: FLAG
+    dialogueText: yes
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+  - command: SCENE
+    dialogueText: PlacePuzzle
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+  - command: END
+    dialogueText: 
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+  - command: FLAG
+    dialogueText: no
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+  - command: 
+    dialogueText: kys
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+  - command: END
+    dialogueText: 
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+  moveTo: {x: 0, y: 0, z: 0}
+  canInteract: 1
+  moving: 0
+  speed: 0
+--- !u!65 &53154183
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53154180}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &53154184
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53154180}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 4023e3abffe9dc5438454d5fcf728acc, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &53154185
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53154180}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &327299024
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,6 +1382,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1293899281}
+  - {fileID: 53154181}
   - {fileID: 1379980347}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

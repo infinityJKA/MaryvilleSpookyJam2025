@@ -1,9 +1,14 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
     public List<DialogueLine> dialogue;
+    [Header("Place puzzle stuff")]
+    public InventoryItem placedItem;
+    public GameObject placedObject, placeObjectPoint;
+
     [Header("Push puzzle stuff")]
     public Vector3 moveTo;
     public bool canInteract = true, moving = false;

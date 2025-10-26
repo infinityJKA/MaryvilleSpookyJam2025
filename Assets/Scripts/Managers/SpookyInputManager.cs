@@ -35,7 +35,7 @@ public class SpookyInputManager : MonoBehaviour
         }
         else if (gm.controlState == ControlState.Overworld)
         {
-            if (gm.interactableObject != null && gm.interactableObject.canInteract) gm.dialogueManager.StartDialogue(gm.interactableObject.dialogue);   
+            if (gm.interactableObject != null && gm.interactableObject.canInteract) gm.dialogueManager.StartDialogue(gm.interactableObject.dialogue, gm.interactableObject);   
         }
     }
 
