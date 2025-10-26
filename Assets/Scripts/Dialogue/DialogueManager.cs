@@ -207,7 +207,7 @@ public class DialogueManager : MonoBehaviour
             else
             {
                 String n = gm.inventoryManager.currentlySelectedItem.itemName;
-                
+
                 currentInteractableObject.placedItem = gm.inventoryManager.currentlySelectedItem;
                 currentInteractableObject.placedObject = Instantiate(gm.inventoryManager.currentlySelectedItem.objectWhenPlaced, currentInteractableObject.placeObjectPoint.transform);
 
@@ -228,8 +228,10 @@ public class DialogueManager : MonoBehaviour
                 RunDialogue();
             }
         }
-        else if(line.command == "REMOVE PLACED")
+        else if (line.command == "REMOVE PLACED")
         {
+            Debug.Log("REMOVE PLACED");
+
             String n = currentInteractableObject.placedItem.itemName;
 
             gm.inventoryManager.inventory.Add(currentInteractableObject.placedItem);
@@ -237,6 +239,17 @@ public class DialogueManager : MonoBehaviour
             currentInteractableObject.placedItem = null;
 
             PrintNormally(new DialogueLine("[You picked up " + n + "]"));
+        }
+        else if (line.command == "GET ITEM")
+        {
+            gm.inventoryManager.inventory.Add(currentInteractableObject.placedItem);
+            RunDialogue();
+        }
+        else if (line.command == "DESTROY")
+        {
+            Destroy(currentInteractableObject.gameObject);
+            dialogueCanvas.SetActive(false);
+            gm.controlState = ControlState.Overworld;
         }
     }
 
