@@ -176,191 +176,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b98d6e3caefd6684cade68e9c60da334, type: 3}
---- !u!1 &1072330426
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1072330431}
-  - component: {fileID: 1072330430}
-  - component: {fileID: 1072330429}
-  - component: {fileID: 1072330428}
-  - component: {fileID: 1072330427}
-  m_Layer: 6
-  m_Name: CodeInteract
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1072330427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072330426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9042f2ced68a424d902d4ad07ff258f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-  - command: 
-    dialogueText: enter my code
-    commandObject: {fileID: 0}
-    multichoice: []
-    sfxToPlay:
-      id: 
-      audio: {fileID: 0}
-  - command: ENTER CODE
-    dialogueText: 12345
-    commandObject: {fileID: 0}
-    multichoice: []
-    sfxToPlay:
-      id: 
-      audio: {fileID: 0}
-  - command: FLAG
-    dialogueText: correct code
-    commandObject: {fileID: 0}
-    multichoice: []
-    sfxToPlay:
-      id: 
-      audio: {fileID: 0}
-  - command: 
-    dialogueText: Code was correct!
-    commandObject: {fileID: 0}
-    multichoice: []
-    sfxToPlay:
-      id: 
-      audio: {fileID: 0}
-  - command: DESTROY
-    dialogueText: 
-    commandObject: {fileID: 0}
-    multichoice: []
-    sfxToPlay:
-      id: 
-      audio: {fileID: 0}
-  - command: FLAG
-    dialogueText: wrong code
-    commandObject: {fileID: 0}
-    multichoice: []
-    sfxToPlay:
-      id: 
-      audio: {fileID: 0}
-  - command: 
-    dialogueText: Wrong code, buddy.
-    commandObject: {fileID: 0}
-    multichoice: []
-    sfxToPlay:
-      id: 
-      audio: {fileID: 0}
-  - command: END
-    dialogueText: 
-    commandObject: {fileID: 0}
-    multichoice: []
-    sfxToPlay:
-      id: 
-      audio: {fileID: 0}
-  placedItem: {fileID: 0}
-  placedObject: {fileID: 0}
-  placeObjectPoint: {fileID: 0}
-  moveTo: {x: 0, y: 0, z: 0}
-  canInteract: 1
-  moving: 0
-  speed: 0
---- !u!65 &1072330428
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072330426}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1072330429
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072330426}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 4023e3abffe9dc5438454d5fcf728acc, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1072330430
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072330426}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1072330431
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072330426}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.23, y: 0.999, z: 19.48}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1179472812
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,6 +726,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 188f88c092e1ae943909aa3fa72e45cb, type: 3}
+--- !u!1001 &7780454244673132750
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 77853628075525618, guid: 0c8735dace80adb428d56aa92ecec7bf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 77853628075525618, guid: 0c8735dace80adb428d56aa92ecec7bf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.999
+      objectReference: {fileID: 0}
+    - target: {fileID: 77853628075525618, guid: 0c8735dace80adb428d56aa92ecec7bf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 19.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 77853628075525618, guid: 0c8735dace80adb428d56aa92ecec7bf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 77853628075525618, guid: 0c8735dace80adb428d56aa92ecec7bf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 77853628075525618, guid: 0c8735dace80adb428d56aa92ecec7bf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 77853628075525618, guid: 0c8735dace80adb428d56aa92ecec7bf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 77853628075525618, guid: 0c8735dace80adb428d56aa92ecec7bf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 77853628075525618, guid: 0c8735dace80adb428d56aa92ecec7bf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 77853628075525618, guid: 0c8735dace80adb428d56aa92ecec7bf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274091800725046414, guid: 0c8735dace80adb428d56aa92ecec7bf, type: 3}
+      propertyPath: m_Name
+      value: CodeInteract
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0c8735dace80adb428d56aa92ecec7bf, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -922,4 +794,4 @@ SceneRoots:
   - {fileID: 5069957724250845319}
   - {fileID: 5774100584308191101}
   - {fileID: 2096164674}
-  - {fileID: 1072330431}
+  - {fileID: 7780454244673132750}
