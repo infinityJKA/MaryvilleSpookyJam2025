@@ -954,7 +954,7 @@ GameObject:
   - component: {fileID: 1379980349}
   - component: {fileID: 1379980348}
   m_Layer: 6
-  m_Name: Ghost (1)
+  m_Name: Holly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -989,14 +989,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - command: 
-    dialogueText: This is a ghost.
+    dialogueText: "Beatrice: Excuse me, I\u2019m looking for a friend of mine, Cerise?
+      She said she\u2019d meet-"
     commandObject: {fileID: 0}
     multichoice: []
     sfxToPlay:
       id: 
       audio: {fileID: 0}
   - command: 
-    dialogueText: '"Solve my catacomb."'
+    dialogueText: "Holly: I\u2019m sorry, you lost a friend? How worrisome! I\u2019m
+      afraid I don\u2019t know a cerise."
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+  - command: 
+    dialogueText: "Holly: I\u2019m sorry, you lost a friend? How worrisome! I\u2019m
+      afraid I don\u2019t know a cerise."
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+  - command: 
+    dialogueText: "Beatrice: She\u2019s, she\u2019s, well\u2026"
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+  - command: 
+    dialogueText: "Holly: Having trouble remembering? This place tends to do that
+      to you\u2026 Which reminds me\u2026 I seem to have lost something dear to me,
+      I may be able to ask other guests if you can go look in that room! Just over
+      there!"
     commandObject: {fileID: 0}
     multichoice: []
     sfxToPlay:
@@ -1006,9 +1033,9 @@ MonoBehaviour:
     dialogueText: 
     commandObject: {fileID: 0}
     multichoice:
-    - buttonText: Sure
+    - buttonText: Look
       flagName: yes
-    - buttonText: Nah
+    - buttonText: Don't
       flagName: no
     sfxToPlay:
       id: 
@@ -1016,18 +1043,40 @@ MonoBehaviour:
   - command: FLAG
     dialogueText: yes
     commandObject: {fileID: 0}
-    multichoice: []
+    multichoice:
+    - buttonText: Look
+      flagName: yes
+    - buttonText: Don't
+      flagName: no
     sfxToPlay:
       id: 
       audio: {fileID: 0}
-  - command: SCENE
-    dialogueText: MirrorPuzzle1
+  - command: ENABLE BLACK
+    dialogueText: 
     commandObject: {fileID: 0}
     multichoice: []
     sfxToPlay:
       id: 
       audio: {fileID: 0}
-  - command: END
+  - command: WAIT
+    dialogueText: 1
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+  - command: SCENE
+    dialogueText: PushPuzzle
+    commandObject: {fileID: 0}
+    multichoice:
+    - buttonText: Look
+      flagName: yes
+    - buttonText: Don't
+      flagName: no
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+  - command: DISABLE BLACK
     dialogueText: 
     commandObject: {fileID: 0}
     multichoice: []
@@ -1036,13 +1085,6 @@ MonoBehaviour:
       audio: {fileID: 0}
   - command: FLAG
     dialogueText: no
-    commandObject: {fileID: 0}
-    multichoice: []
-    sfxToPlay:
-      id: 
-      audio: {fileID: 0}
-  - command: 
-    dialogueText: kys
     commandObject: {fileID: 0}
     multichoice: []
     sfxToPlay:
