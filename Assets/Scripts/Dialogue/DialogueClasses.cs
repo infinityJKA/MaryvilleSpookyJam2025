@@ -13,6 +13,7 @@ public class DialogueLine
 
     public List<MultichoiceObject> multichoice;
     public SoundObj sfxToPlay;
+    public InventoryItem item;
 
 
     public DialogueLine(String text)

@@ -8,6 +8,7 @@ public class InteractableObject : MonoBehaviour
     [Header("Place puzzle stuff")]
     public InventoryItem placedItem;
     public GameObject placedObject, placeObjectPoint;
+    
 
     [Header("Push puzzle stuff")]
     public Vector3 moveTo;
