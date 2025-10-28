@@ -17,14 +17,30 @@ public class InventoryManager : MonoBehaviour
 
     void Start()
     {
-        gm = GameManager.instance;    
+        
     }
 
     public void OpenInventory()
     {
         gm.controlState = ControlState.NoControls;
 
-        while (inventoryLayoutGroup.transform.childCount > 0) DestroyImmediate(inventoryLayoutGroup.transform.GetChild(0).gameObject);
+        Debug.Log("inventory layout group exists = " + (inventoryLayoutGroup.gameObject != null));
+        if (inventoryLayoutGroup.gameObject == null)
+        {
+            gm.controlState = ControlState.Overworld;
+            return;
+        }
+
+        if (inventoryLayoutGroup.transform.childCount > 0)
+        {
+            while (inventoryLayoutGroup.transform.childCount > 0)
+            {
+                if (inventoryLayoutGroup.transform.GetChild(0).gameObject != null)
+                {
+                    DestroyImmediate(inventoryLayoutGroup.transform.GetChild(0).gameObject);
+                }
+            }
+        }
 
         foreach (InventoryItem i in inventory)
         {
@@ -42,6 +58,10 @@ public class InventoryManager : MonoBehaviour
         inventoryCanvas.SetActive(true);
 
         gm.controlState = ControlState.InventoryMenu;
+        
+        
+
+        
     }
 
     public void CloseInventory()

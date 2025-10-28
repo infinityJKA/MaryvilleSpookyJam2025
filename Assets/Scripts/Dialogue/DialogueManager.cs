@@ -20,6 +20,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject inputParent;
     public TMP_InputField inputField;
     public Image blackBg;
+    public GameManager gm;
 
     [Header("Automatically assigned through code")]
     public int dialogueIndex;
@@ -28,11 +29,10 @@ public class DialogueManager : MonoBehaviour
     public InteractableObject currentInteractableObject;
     public String commandDialogueText;
     public String correctCode;
-    private GameManager gm;
-
+    
     void Start()
     {
-        gm = GameManager.instance;
+        
     }
 
     public void StartDialogue(List<DialogueLine> lines, int index, InteractableObject currentInteractableObject)
