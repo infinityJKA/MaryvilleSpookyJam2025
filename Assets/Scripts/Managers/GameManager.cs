@@ -5,11 +5,16 @@ using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
+    public bool mirrorFinished = false, hollyFinished = false, dualityFinished = false;
+
     [SerializeField] SpookyInputManager inputManager;
     public DialogueManager dialogueManager;
     public MoveManager moveManager;
     public InventoryManager inventoryManager;
     public AudioManager audioManager;
+
+    public Vector3 ballroomSpawnCords;
+
 
     public EventSystem eventSystem;
 
@@ -18,6 +23,8 @@ public class GameManager : MonoBehaviour
     public InteractableObject interactableObject;
 
     public List<DialogueLine> introDialogue;
+
+   
 
 
 
@@ -38,7 +45,8 @@ public class GameManager : MonoBehaviour
 
         DontDestroyOnLoad(this);
 
-        inputManager.gm = this;
+        eventSystem.gameObject.SetActive(true);
+
     }
 
     void Start()

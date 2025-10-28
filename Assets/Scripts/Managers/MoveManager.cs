@@ -5,7 +5,7 @@ public class MoveManager : MonoBehaviour
     public PlayerObject player;
     [SerializeField] float moveSpeed;
     [SerializeField] Camera freelookCamera;
-    private GameManager gm;
+    public GameManager gm;
     private AudioSource walkSound;
 
     void Awake()

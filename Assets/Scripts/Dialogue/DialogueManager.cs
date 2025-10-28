@@ -20,6 +20,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject inputParent;
     public TMP_InputField inputField;
     public Image blackBg;
+    public GameManager gm;
 
     [Header("Automatically assigned through code")]
     public int dialogueIndex;
@@ -28,11 +29,10 @@ public class DialogueManager : MonoBehaviour
     public InteractableObject currentInteractableObject;
     public String commandDialogueText;
     public String correctCode;
-    private GameManager gm;
-
+    
     void Start()
     {
-        gm = GameManager.instance;
+        
     }
 
     public void StartDialogue(List<DialogueLine> lines, int index, InteractableObject currentInteractableObject)
@@ -275,6 +275,53 @@ public class DialogueManager : MonoBehaviour
         {
             StartCoroutine(DialogueWait(int.Parse(line.dialogueText)));
         }
+        else if(line.command == "IF ALL COMPLETE")
+        {
+            if (gm.mirrorFinished && gm.hollyFinished && gm.dualityFinished)
+            {
+                GoToFlag(line.dialogueText);
+            }
+            else RunDialogue();
+        }
+        else if(line.command == "IF MIRROR FINISHED")
+        {
+            if (gm.mirrorFinished) GoToFlag(line.dialogueText);
+            else RunDialogue();
+        }
+        else if (line.command == "IF HOLLY FINISHED")
+        {
+            if (gm.hollyFinished) GoToFlag(line.dialogueText);
+            else RunDialogue();
+        }
+        else if (line.command == "IF DUALITY FINISHED")
+        {
+            if (gm.dualityFinished) GoToFlag(line.dialogueText);
+            else RunDialogue();
+        }
+        else if (line.command == "FINISHED PUZZLE")
+        {
+            if (line.dialogueText == "holly") gm.hollyFinished = true;
+            else if (line.dialogueText == "mirror") gm.mirrorFinished = true;
+            else if (line.dialogueText == "duality") gm.dualityFinished = true;
+
+            RunDialogue();
+        }
+        else if (line.command == "BALLROOM")
+        {
+            SceneManager.LoadScene("Ballroom");
+            DialogueWait(1f);
+
+            gm.moveManager.player.transform.position = gm.ballroomSpawnCords;
+
+
+            RunDialogue();
+        }
+        else if (line.command == "ADD ITEM")
+        {
+            gm.inventoryManager.inventory.Add(line.item);
+            RunDialogue();
+        }
+
     }
 
     private IEnumerator DialogueWait(float t)
