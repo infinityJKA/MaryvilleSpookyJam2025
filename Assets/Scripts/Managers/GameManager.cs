@@ -39,6 +39,9 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this);
 
         inputManager.gm = this;
+        //dialogueManager.gm = this;
+        moveManager.gm = this;
+        inventoryManager.gm = this;
     }
 
     void Start()

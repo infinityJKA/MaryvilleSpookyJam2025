@@ -51,7 +51,7 @@ public class SpookyInputManager : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (gm.controlState == ControlState.Overworld)
         {  
