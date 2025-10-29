@@ -311,7 +311,7 @@ public class DialogueManager : MonoBehaviour
             SceneManager.LoadScene("Ballroom");
             DialogueWait(1f);
 
-            gm.moveManager.player.transform.position = gm.ballroomSpawnCords;
+            //gm.moveManager.player.transform.position = gm.ballroomSpawnCords;
 
 
             RunDialogue();

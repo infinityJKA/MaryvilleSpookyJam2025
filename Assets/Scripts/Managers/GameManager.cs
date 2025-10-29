@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public InventoryManager inventoryManager;
     public AudioManager audioManager;
 
-    public Vector3 ballroomSpawnCords;
+    //public Vector3 ballroomSpawnCords;
 
 
     public EventSystem eventSystem;
