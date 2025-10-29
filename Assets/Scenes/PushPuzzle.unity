@@ -6222,6 +6222,14 @@ MonoBehaviour:
       id: 
       audio: {fileID: 0}
     item: {fileID: 11400000, guid: 078c576effeacd54db2cf28260ccdf32, type: 2}
+  - command: FINISHED PUZZLE
+    dialogueText: holly
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
   - command: ENABLE BLACK
     dialogueText: 
     commandObject: {fileID: 0}
@@ -6240,14 +6248,6 @@ MonoBehaviour:
     item: {fileID: 0}
   - command: DISABLE BLACK
     dialogueText: 
-    commandObject: {fileID: 0}
-    multichoice: []
-    sfxToPlay:
-      id: 
-      audio: {fileID: 0}
-    item: {fileID: 0}
-  - command: FINISHED PUZZLE
-    dialogueText: holly
     commandObject: {fileID: 0}
     multichoice: []
     sfxToPlay:

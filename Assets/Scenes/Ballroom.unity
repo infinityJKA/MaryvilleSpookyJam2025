@@ -511,8 +511,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 785696387}
+  - component: {fileID: 785696388}
   m_Layer: 0
-  m_Name: TESTING
+  m_Name: SPAWN
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -533,6 +534,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &785696388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785696386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69e0a1e3e0d3f3144b513efc2dca52f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &946452927
 GameObject:
   m_ObjectHideFlags: 0
