@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 53154183}
   - component: {fileID: 53154182}
   m_Layer: 6
-  m_Name: Ghost (2)
+  m_Name: Duality
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -167,8 +167,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-  - command: 
-    dialogueText: This is a ghost.
+  - command: IF ALL COMPLETE
+    dialogueText: all
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: IF DUALITY FINISHED
+    dialogueText: duality
     commandObject: {fileID: 0}
     multichoice: []
     sfxToPlay:
@@ -176,7 +184,51 @@ MonoBehaviour:
       audio: {fileID: 0}
     item: {fileID: 0}
   - command: 
-    dialogueText: '"Solve my catacomb."'
+    dialogueText: "Beatrice: I\u2019m looking for my friend, her name's Cerise\r\n"
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: 
+    dialogueText: 'Duality: Oh a friend? How fun! Did you use to swim in lakes together?
+
+'
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: 
+    dialogueText: "Beatrice: She\u2019s not much of a swimmer\u2026 she said she\u2019d
+      meet me here but-"
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: 
+    dialogueText: 'Duality: You got stood up by your date? How unfortunate. '
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: 
+    dialogueText: "Beatrice: That\u2019s not, well..."
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: 
+    dialogueText: "Duality: I could ask around if you\u2019d retrieve a small object
+      de\u2019art for me, just over there in that room"
     commandObject: {fileID: 0}
     multichoice: []
     sfxToPlay:
@@ -187,16 +239,16 @@ MonoBehaviour:
     dialogueText: 
     commandObject: {fileID: 0}
     multichoice:
-    - buttonText: Sure
-      flagName: yes
-    - buttonText: Nah
-      flagName: no
+    - buttonText: Go
+      flagName: go
+    - buttonText: Stay
+      flagName: stay
     sfxToPlay:
       id: 
       audio: {fileID: 0}
     item: {fileID: 0}
   - command: FLAG
-    dialogueText: yes
+    dialogueText: go
     commandObject: {fileID: 0}
     multichoice: []
     sfxToPlay:
@@ -220,7 +272,23 @@ MonoBehaviour:
       audio: {fileID: 0}
     item: {fileID: 0}
   - command: FLAG
-    dialogueText: no
+    dialogueText: stay
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: END
+    dialogueText: 
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: FLAG
+    dialogueText: all
     commandObject: {fileID: 0}
     multichoice: []
     sfxToPlay:
@@ -228,7 +296,8 @@ MonoBehaviour:
       audio: {fileID: 0}
     item: {fileID: 0}
   - command: 
-    dialogueText: kys
+    dialogueText: Thank you so much dear, I believe your friend Cerise entered the
+      catacombs.
     commandObject: {fileID: 0}
     multichoice: []
     sfxToPlay:
@@ -774,7 +843,7 @@ GameObject:
   - component: {fileID: 1293899283}
   - component: {fileID: 1293899282}
   m_Layer: 6
-  m_Name: Ghost
+  m_Name: Mirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -808,8 +877,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-  - command: 
-    dialogueText: This is a ghost.
+  - command: IF ALL COMPLETE
+    dialogueText: all
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: IF MIRROR FINISHED
+    dialogueText: portrait
     commandObject: {fileID: 0}
     multichoice: []
     sfxToPlay:
@@ -817,7 +894,48 @@ MonoBehaviour:
       audio: {fileID: 0}
     item: {fileID: 0}
   - command: 
-    dialogueText: '"Solve my catacomb."'
+    dialogueText: 'Mirror: I am the belle of the ball, you know! How fortunate all
+      these people are to bask in my beautiful face!'
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: 
+    dialogueText: 'Beatrice: . . .'
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: 
+    dialogueText: 'Mirror:  ...Oh? ...Oh. I cannot seem to find my face! It''s horrible!'
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: END
+    dialogueText: 
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: FLAG
+    dialogueText: portrait
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: 
+    dialogueText: "Mirror: Oh my, oh my\u2026! She's beautiful, I'm beautiful!"
     commandObject: {fileID: 0}
     multichoice: []
     sfxToPlay:
@@ -828,16 +946,32 @@ MonoBehaviour:
     dialogueText: 
     commandObject: {fileID: 0}
     multichoice:
+    - buttonText: Yeah
+      flagName: yeah
     - buttonText: Sure
-      flagName: yes
-    - buttonText: Nah
-      flagName: no
+      flagName: sure
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: END
+    dialogueText: 
+    commandObject: {fileID: 0}
+    multichoice: []
     sfxToPlay:
       id: 
       audio: {fileID: 0}
     item: {fileID: 0}
   - command: FLAG
-    dialogueText: yes
+    dialogueText: yeah
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: END
+    dialogueText: 
     commandObject: {fileID: 0}
     multichoice: []
     sfxToPlay:
@@ -861,7 +995,23 @@ MonoBehaviour:
       audio: {fileID: 0}
     item: {fileID: 0}
   - command: FLAG
-    dialogueText: no
+    dialogueText: sure
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: END
+    dialogueText: 
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: FLAG
+    dialogueText: all
     commandObject: {fileID: 0}
     multichoice: []
     sfxToPlay:
@@ -869,7 +1019,8 @@ MonoBehaviour:
       audio: {fileID: 0}
     item: {fileID: 0}
   - command: 
-    dialogueText: kys
+    dialogueText: 'Mirror: Thank you so much dear, I believe your friend Cerise entered
+      the catacombs.'
     commandObject: {fileID: 0}
     multichoice: []
     sfxToPlay:
@@ -1040,7 +1191,7 @@ MonoBehaviour:
     item: {fileID: 0}
   - command: 
     dialogueText: "Holly: I\u2019m sorry, you lost a friend? How worrisome! I\u2019m
-      afraid I don\u2019t know a cerise."
+      afraid I don\u2019t know a Cerise."
     commandObject: {fileID: 0}
     multichoice: []
     sfxToPlay:
@@ -1559,9 +1710,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1379980347}
   - {fileID: 1293899281}
   - {fileID: 53154181}
-  - {fileID: 1379980347}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
