@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HandFan
   m_EditorClassIdentifier: 
   itemName: Fan
-  sprite: {fileID: 21300000, guid: d4e74ea1f45f21e44bfc4564410b0b44, type: 3}
+  sprite: {fileID: 21300000, guid: fd7754a5c8bd48b4ab3218001530882a, type: 3}
   canPlaced: 1
   objectWhenPlaced: {fileID: 3207855422680422813, guid: e849311af7a1a6742a84580eb3f93622, type: 3}
   placedInteractLine: -8--

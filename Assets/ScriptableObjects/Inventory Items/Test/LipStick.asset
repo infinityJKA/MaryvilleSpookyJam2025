@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LipStick
   m_EditorClassIdentifier: 
   itemName: Lipstick
-  sprite: {fileID: 21300000, guid: d4e74ea1f45f21e44bfc4564410b0b44, type: 3}
+  sprite: {fileID: 21300000, guid: f615294bf0448464fb9db9471fa24e63, type: 3}
   canPlaced: 1
-  objectWhenPlaced: {fileID: 3207855422680422813, guid: 0ef1b80f332bf454e950df520cd154d0, type: 3}
+  objectWhenPlaced: {fileID: 919132149155446097, guid: 40b55b3d8d8e7644095849daa3ec6242, type: 3}
   placedInteractLine: ---4

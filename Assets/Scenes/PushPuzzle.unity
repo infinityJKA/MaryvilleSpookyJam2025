@@ -6113,6 +6113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9042f2ced68a424d902d4ad07ff258f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDeath: 0
   dialogue:
   - command: 
     dialogueText: <You collected the letter...>
