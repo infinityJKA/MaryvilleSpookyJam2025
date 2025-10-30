@@ -1217,6 +1217,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: DEATH
       objectReference: {fileID: 0}
+    - target: {fileID: 6933776379260469304, guid: 9f969317ad8aeff4ba984184e6312b3d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6dcb3dd600f88f342ab8532e80a39ec3, type: 2}
+    - target: {fileID: 7202271454713460447, guid: 9f969317ad8aeff4ba984184e6312b3d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6dcb3dd600f88f342ab8532e80a39ec3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
