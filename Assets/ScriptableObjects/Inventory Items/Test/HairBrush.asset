@@ -15,5 +15,5 @@ MonoBehaviour:
   itemName: Hairbrush
   sprite: {fileID: 21300000, guid: d4e74ea1f45f21e44bfc4564410b0b44, type: 3}
   canPlaced: 1
-  objectWhenPlaced: {fileID: 3207855422680422813, guid: 0ef1b80f332bf454e950df520cd154d0, type: 3}
+  objectWhenPlaced: {fileID: 919132149155446097, guid: 503dda9297e77bb4d948aa2af7c0e1bb, type: 3}
   placedInteractLine: 1---
