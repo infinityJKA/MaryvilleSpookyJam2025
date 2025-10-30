@@ -734,6 +734,54 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3553662807008136711, guid: 0c8735dace80adb428d56aa92ecec7bf, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553662807008136711, guid: 0c8735dace80adb428d56aa92ecec7bf, type: 3}
+      propertyPath: dialogue.Array.data[4].command
+      value: FINISHED PUZZLE
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553662807008136711, guid: 0c8735dace80adb428d56aa92ecec7bf, type: 3}
+      propertyPath: dialogue.Array.data[5].command
+      value: SCENE
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553662807008136711, guid: 0c8735dace80adb428d56aa92ecec7bf, type: 3}
+      propertyPath: dialogue.Array.data[6].command
+      value: END
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553662807008136711, guid: 0c8735dace80adb428d56aa92ecec7bf, type: 3}
+      propertyPath: dialogue.Array.data[7].command
+      value: FLAG
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553662807008136711, guid: 0c8735dace80adb428d56aa92ecec7bf, type: 3}
+      propertyPath: dialogue.Array.data[8].command
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553662807008136711, guid: 0c8735dace80adb428d56aa92ecec7bf, type: 3}
+      propertyPath: dialogue.Array.data[9].command
+      value: END
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553662807008136711, guid: 0c8735dace80adb428d56aa92ecec7bf, type: 3}
+      propertyPath: dialogue.Array.data[4].dialogueText
+      value: duality
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553662807008136711, guid: 0c8735dace80adb428d56aa92ecec7bf, type: 3}
+      propertyPath: dialogue.Array.data[5].dialogueText
+      value: Ballroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553662807008136711, guid: 0c8735dace80adb428d56aa92ecec7bf, type: 3}
+      propertyPath: dialogue.Array.data[6].dialogueText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553662807008136711, guid: 0c8735dace80adb428d56aa92ecec7bf, type: 3}
+      propertyPath: dialogue.Array.data[7].dialogueText
+      value: wrong code
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553662807008136711, guid: 0c8735dace80adb428d56aa92ecec7bf, type: 3}
+      propertyPath: dialogue.Array.data[8].dialogueText
+      value: Wrong code, buddy.
+      objectReference: {fileID: 0}
     - target: {fileID: 5274091800725046414, guid: 0c8735dace80adb428d56aa92ecec7bf, type: 3}
       propertyPath: m_Name
       value: CodeInteract

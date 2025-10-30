@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PlacePuzzle.unity
     guid: b090c2f9e2013b64dbd11a0dbef41778
+  - enabled: 1
+    path: Assets/Scenes/Catacombs.unity
+    guid: 66a3a11455e10064d8575e1aca606450
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
