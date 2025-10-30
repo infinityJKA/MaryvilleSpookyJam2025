@@ -47,6 +47,8 @@ public class GameManager : MonoBehaviour
 
         eventSystem.gameObject.SetActive(true);
 
+        audioManager.PlayMusic("dance");
+
     }
 
     void Start()
