@@ -288,6 +288,30 @@ MonoBehaviour:
       audio: {fileID: 0}
     item: {fileID: 0}
   - command: FLAG
+    dialogueText: duality
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: 
+    dialogueText: (PLACEHOLDER)
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: END
+    dialogueText: 
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: FLAG
     dialogueText: all
     commandObject: {fileID: 0}
     multichoice: []
@@ -1039,6 +1063,82 @@ MonoBehaviour:
       id: 
       audio: {fileID: 0}
     item: {fileID: 0}
+  - command: MULTI
+    dialogueText: 
+    commandObject: {fileID: 0}
+    multichoice:
+    - buttonText: Go
+      flagName: go
+    - buttonText: Stay
+      flagName: stay
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: END
+    dialogueText: 
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: FLAG
+    dialogueText: go
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: ENABLE BLACK
+    dialogueText: 
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: WAIT
+    dialogueText: 1
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: SCENE
+    dialogueText: MirrorPuzzle1
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: DISABLE BLACK
+    dialogueText: 
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: END
+    dialogueText: 
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: FLAG
+    dialogueText: stay
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
   - command: END
     dialogueText: 
     commandObject: {fileID: 0}
@@ -1478,6 +1578,14 @@ MonoBehaviour:
   - command: 
     dialogueText: 'Holly: Thank you so much dear, I believe your friend Cerise entered
       the catacombs.'
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: SCENE
+    dialogueText: Catacombs
     commandObject: {fileID: 0}
     multichoice: []
     sfxToPlay:
