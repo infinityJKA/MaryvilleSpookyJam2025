@@ -53,7 +53,7 @@ public class DialogueManager : MonoBehaviour
     {
         Debug.Log("StartDialogue()");
 
-        if (currentInteractableObject.isDeath)
+        if (currentInteractableObject != null && currentInteractableObject.isDeath)
         {
             gm.audioManager.PlayMusic("death");
         }

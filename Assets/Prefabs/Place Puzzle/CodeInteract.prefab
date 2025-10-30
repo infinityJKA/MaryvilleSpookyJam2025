@@ -30,9 +30,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.23, y: 0.999, z: 19.48}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 421056753670942197}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1633818156856867482
@@ -50,7 +51,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5274091800725046414}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -121,6 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9042f2ced68a424d902d4ad07ff258f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDeath: 0
   dialogue:
   - command: 
     dialogueText: enter my code
@@ -129,13 +131,15 @@ MonoBehaviour:
     sfxToPlay:
       id: 
       audio: {fileID: 0}
+    item: {fileID: 0}
   - command: ENTER CODE
-    dialogueText: 12345
+    dialogueText: 1854
     commandObject: {fileID: 0}
     multichoice: []
     sfxToPlay:
       id: 
       audio: {fileID: 0}
+    item: {fileID: 0}
   - command: FLAG
     dialogueText: correct code
     commandObject: {fileID: 0}
@@ -143,6 +147,7 @@ MonoBehaviour:
     sfxToPlay:
       id: 
       audio: {fileID: 0}
+    item: {fileID: 0}
   - command: 
     dialogueText: Code was correct!
     commandObject: {fileID: 0}
@@ -150,27 +155,23 @@ MonoBehaviour:
     sfxToPlay:
       id: 
       audio: {fileID: 0}
-  - command: DESTROY
-    dialogueText: 
+    item: {fileID: 0}
+  - command: FINISHED PUZZLE
+    dialogueText: duality
     commandObject: {fileID: 0}
     multichoice: []
     sfxToPlay:
       id: 
       audio: {fileID: 0}
-  - command: FLAG
-    dialogueText: wrong code
+    item: {fileID: 0}
+  - command: SCENE
+    dialogueText: Ballroom
     commandObject: {fileID: 0}
     multichoice: []
     sfxToPlay:
       id: 
       audio: {fileID: 0}
-  - command: 
-    dialogueText: Wrong code, buddy.
-    commandObject: {fileID: 0}
-    multichoice: []
-    sfxToPlay:
-      id: 
-      audio: {fileID: 0}
+    item: {fileID: 0}
   - command: END
     dialogueText: 
     commandObject: {fileID: 0}
@@ -178,6 +179,31 @@ MonoBehaviour:
     sfxToPlay:
       id: 
       audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: FLAG
+    dialogueText: wrong code
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: 
+    dialogueText: Wrong code, buddy.
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
+  - command: END
+    dialogueText: 
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
   placedItem: {fileID: 0}
   placedObject: {fileID: 0}
   placeObjectPoint: {fileID: 0}
@@ -185,3 +211,77 @@ MonoBehaviour:
   canInteract: 1
   moving: 0
   speed: 0
+--- !u!1001 &170395300646128158
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 77853628075525618}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: a531af8b84a75c344bcb6fc454e10400, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a531af8b84a75c344bcb6fc454e10400, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a531af8b84a75c344bcb6fc454e10400, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a531af8b84a75c344bcb6fc454e10400, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a531af8b84a75c344bcb6fc454e10400, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.464
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a531af8b84a75c344bcb6fc454e10400, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.318
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a531af8b84a75c344bcb6fc454e10400, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a531af8b84a75c344bcb6fc454e10400, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a531af8b84a75c344bcb6fc454e10400, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a531af8b84a75c344bcb6fc454e10400, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a531af8b84a75c344bcb6fc454e10400, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a531af8b84a75c344bcb6fc454e10400, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a531af8b84a75c344bcb6fc454e10400, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a531af8b84a75c344bcb6fc454e10400, type: 3}
+      propertyPath: m_Name
+      value: door
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a531af8b84a75c344bcb6fc454e10400, type: 3}
+--- !u!4 &421056753670942197 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a531af8b84a75c344bcb6fc454e10400, type: 3}
+  m_PrefabInstance: {fileID: 170395300646128158}
+  m_PrefabAsset: {fileID: 0}

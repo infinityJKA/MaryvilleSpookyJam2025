@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Letter
   m_EditorClassIdentifier: 
   itemName: Letter
-  sprite: {fileID: 21300000, guid: d4e74ea1f45f21e44bfc4564410b0b44, type: 3}
+  sprite: {fileID: 21300000, guid: 203ba1b1e808e7d4aaa23846aff93bfa, type: 3}
   canPlaced: 0
   objectWhenPlaced: {fileID: 0}
   placedInteractLine: 

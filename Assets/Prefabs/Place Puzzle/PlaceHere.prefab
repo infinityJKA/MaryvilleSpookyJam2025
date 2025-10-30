@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 5754160450184964739}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.104, z: 0}
+  m_LocalPosition: {x: 0, y: 1.439, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -65,6 +65,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6741295133507532732}
+  - {fileID: 8128037890863956917}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5350753906442954529
@@ -82,7 +83,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7719833144389928440}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -153,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9042f2ced68a424d902d4ad07ff258f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDeath: 0
   dialogue:
   - command: IF PLACED
     dialogueText: pickup
@@ -161,6 +163,7 @@ MonoBehaviour:
     sfxToPlay:
       id: 
       audio: {fileID: 0}
+    item: {fileID: 0}
   - command: 
     dialogueText: '[You can place an item here...]'
     commandObject: {fileID: 0}
@@ -168,6 +171,7 @@ MonoBehaviour:
     sfxToPlay:
       id: 
       audio: {fileID: 0}
+    item: {fileID: 0}
   - command: MULTI
     dialogueText: 
     commandObject: {fileID: 0}
@@ -179,6 +183,7 @@ MonoBehaviour:
     sfxToPlay:
       id: 
       audio: {fileID: 0}
+    item: {fileID: 0}
   - command: FLAG
     dialogueText: place
     commandObject: {fileID: 0}
@@ -186,6 +191,7 @@ MonoBehaviour:
     sfxToPlay:
       id: 
       audio: {fileID: 0}
+    item: {fileID: 0}
   - command: PLACE EQUIPPED
     dialogueText: 
     commandObject: {fileID: 0}
@@ -193,6 +199,7 @@ MonoBehaviour:
     sfxToPlay:
       id: 
       audio: {fileID: 0}
+    item: {fileID: 0}
   - command: READ PLACED
     dialogueText: 
     commandObject: {fileID: 0}
@@ -200,6 +207,7 @@ MonoBehaviour:
     sfxToPlay:
       id: 
       audio: {fileID: 0}
+    item: {fileID: 0}
   - command: SENDTO
     dialogueText: end
     commandObject: {fileID: 0}
@@ -207,6 +215,7 @@ MonoBehaviour:
     sfxToPlay:
       id: 
       audio: {fileID: 0}
+    item: {fileID: 0}
   - command: FLAG
     dialogueText: pickup
     commandObject: {fileID: 0}
@@ -214,6 +223,7 @@ MonoBehaviour:
     sfxToPlay:
       id: 
       audio: {fileID: 0}
+    item: {fileID: 0}
   - command: READ PLACED
     dialogueText: 
     commandObject: {fileID: 0}
@@ -221,6 +231,7 @@ MonoBehaviour:
     sfxToPlay:
       id: 
       audio: {fileID: 0}
+    item: {fileID: 0}
   - command: 
     dialogueText: '[Pick up item?]'
     commandObject: {fileID: 0}
@@ -228,6 +239,7 @@ MonoBehaviour:
     sfxToPlay:
       id: 
       audio: {fileID: 0}
+    item: {fileID: 0}
   - command: MULTI
     dialogueText: 
     commandObject: {fileID: 0}
@@ -239,6 +251,7 @@ MonoBehaviour:
     sfxToPlay:
       id: 
       audio: {fileID: 0}
+    item: {fileID: 0}
   - command: FLAG
     dialogueText: pickup2
     commandObject: {fileID: 0}
@@ -246,6 +259,7 @@ MonoBehaviour:
     sfxToPlay:
       id: 
       audio: {fileID: 0}
+    item: {fileID: 0}
   - command: REMOVE PLACED
     dialogueText: 
     commandObject: {fileID: 0}
@@ -253,6 +267,7 @@ MonoBehaviour:
     sfxToPlay:
       id: 
       audio: {fileID: 0}
+    item: {fileID: 0}
   - command: FLAG
     dialogueText: end
     commandObject: {fileID: 0}
@@ -260,6 +275,7 @@ MonoBehaviour:
     sfxToPlay:
       id: 
       audio: {fileID: 0}
+    item: {fileID: 0}
   - command: END
     dialogueText: 
     commandObject: {fileID: 0}
@@ -267,6 +283,7 @@ MonoBehaviour:
     sfxToPlay:
       id: 
       audio: {fileID: 0}
+    item: {fileID: 0}
   placedItem: {fileID: 0}
   placedObject: {fileID: 0}
   placeObjectPoint: {fileID: 5754160450184964739}
@@ -274,3 +291,77 @@ MonoBehaviour:
   canInteract: 1
   moving: 0
   speed: 0
+--- !u!1001 &8594607622641017950
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5620776864516714376}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 260e844bdee4e0149b8b37f6c849b4ed, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 260e844bdee4e0149b8b37f6c849b4ed, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 260e844bdee4e0149b8b37f6c849b4ed, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 260e844bdee4e0149b8b37f6c849b4ed, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.027
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 260e844bdee4e0149b8b37f6c849b4ed, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.457
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 260e844bdee4e0149b8b37f6c849b4ed, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.048
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 260e844bdee4e0149b8b37f6c849b4ed, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 260e844bdee4e0149b8b37f6c849b4ed, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 260e844bdee4e0149b8b37f6c849b4ed, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 260e844bdee4e0149b8b37f6c849b4ed, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 260e844bdee4e0149b8b37f6c849b4ed, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 260e844bdee4e0149b8b37f6c849b4ed, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 260e844bdee4e0149b8b37f6c849b4ed, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 260e844bdee4e0149b8b37f6c849b4ed, type: 3}
+      propertyPath: m_Name
+      value: stool
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 260e844bdee4e0149b8b37f6c849b4ed, type: 3}
+--- !u!4 &8128037890863956917 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 260e844bdee4e0149b8b37f6c849b4ed, type: 3}
+  m_PrefabInstance: {fileID: 8594607622641017950}
+  m_PrefabAsset: {fileID: 0}
