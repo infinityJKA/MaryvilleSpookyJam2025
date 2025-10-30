@@ -903,6 +903,14 @@ MonoBehaviour:
       id: 
       audio: {fileID: 0}
     item: {fileID: 0}
+  - command: 
+    dialogueText: END
+    commandObject: {fileID: 0}
+    multichoice: []
+    sfxToPlay:
+      id: 
+      audio: {fileID: 0}
+    item: {fileID: 0}
   - command: SCENE
     dialogueText: HomeMenu
     commandObject: {fileID: 0}
