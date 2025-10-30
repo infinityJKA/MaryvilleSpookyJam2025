@@ -60,11 +60,13 @@ public class SpookyInputManager : MonoBehaviour
             if (moveValue != Vector2.zero)
             {
                 gm.moveManager.Move(moveValue);
+                gm.moveManager.player.animator.SetFloat("Speed", 1);
                 //Debug.Log("RETURN (state = overworld)");
             }
             else
             {
                 gm.moveManager.StopWalkSound();
+                gm.moveManager.player.animator.SetFloat("Speed", 0);
             }
         }
     }

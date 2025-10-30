@@ -5,4 +5,5 @@ using UnityEngine;
 public class PlayerObject : MonoBehaviour
 {
     public List<GameObject> mirroedObjects;
+    public Animator animator;
 }
