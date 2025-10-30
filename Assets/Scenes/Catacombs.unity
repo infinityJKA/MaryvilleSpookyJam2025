@@ -586,6 +586,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6687916313045363840, guid: b98d6e3caefd6684cade68e9c60da334, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6736096907136703477, guid: b98d6e3caefd6684cade68e9c60da334, type: 3}
       propertyPath: currentDialogue.Array.size
       value: 0
@@ -698,6 +702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9042f2ced68a424d902d4ad07ff258f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDeath: 1
   dialogue:
   - command: 
     dialogueText: 'Beatrice:  Who are you????'

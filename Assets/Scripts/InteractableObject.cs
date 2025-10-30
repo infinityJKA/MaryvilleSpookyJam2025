@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
+    [SerializeField] public bool isDeath = false;
     public List<DialogueLine> dialogue;
     [Header("Place puzzle stuff")]
     public InventoryItem placedItem;
