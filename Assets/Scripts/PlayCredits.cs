@@ -7,7 +7,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     
     public void ResetScroll()
     {
-        rectTransform.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x, -714);
+        rectTransform.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x, -1100);
     }
 
     void Update()
