@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_IncludeLayers.m_Bits
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 5071382701541078130, guid: aaf91daf80db18f4b877a8dabdf0bbe4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5374855594913999335, guid: aaf91daf80db18f4b877a8dabdf0bbe4, type: 3}
       propertyPath: m_Name
       value: PushDetect (1)
