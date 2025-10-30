@@ -135,6 +135,11 @@ public class DialogueManager : MonoBehaviour
             dialogueCanvas.SetActive(false);
             gm.controlState = ControlState.Overworld;
         }
+        else if (line.command == "END IN NO CONTROLSTATE")
+        {
+            dialogueCanvas.SetActive(false);
+            gm.controlState = ControlState.NoControls;
+        }
         else if (line.command == "SENDTO")
         {
             GoToFlag(line.dialogueText);
@@ -276,11 +281,11 @@ public class DialogueManager : MonoBehaviour
         {
             StartCoroutine(FadeOutBlack());
         }
-        else if(line.command == "WAIT")
+        else if (line.command == "WAIT")
         {
             StartCoroutine(DialogueWait(int.Parse(line.dialogueText)));
         }
-        else if(line.command == "IF ALL COMPLETE")
+        else if (line.command == "IF ALL COMPLETE")
         {
             if (gm.mirrorFinished && gm.hollyFinished && gm.dualityFinished)
             {
@@ -288,7 +293,7 @@ public class DialogueManager : MonoBehaviour
             }
             else RunDialogue();
         }
-        else if(line.command == "IF MIRROR FINISHED")
+        else if (line.command == "IF MIRROR FINISHED")
         {
             if (gm.mirrorFinished) GoToFlag(line.dialogueText);
             else RunDialogue();
